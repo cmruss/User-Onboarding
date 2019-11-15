@@ -40,10 +40,10 @@ const UserForm = ({values, errors, touched, status}) =>{
             {users.map(user => (
                     <div className='user-card'>
                 <ul key={user.id}>
-                    <li>name: {user.name}</li>
-                    <li>email: {user.email}</li>
-                    <li>password: {user.password}</li>
-                    <li>role: {user.role}</li>
+                    <li><b>name: </b><br/>{user.name}</li>
+                    <li><b>email: </b><br/>{user.email}</li>
+                    <li><b>password: </b><br/>{user.password}</li>
+                    <li><b>role: </b><br/>{user.role}</li>
                 </ul>
                 </div>
                 ))}  
