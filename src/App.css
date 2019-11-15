@@ -44,7 +44,7 @@
   font-size: 1.2rem;
   font-weight: 700;
   padding: 0 2%;
-  box-shadow: 5px 10px 40px darkslateblue inset;
+  box-shadow: 5px 0 40px darkslateblue inset;
 }
 
 .user-card{

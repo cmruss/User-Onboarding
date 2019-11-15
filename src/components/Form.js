@@ -13,7 +13,7 @@ const UserForm = ({values, errors, touched, status}) =>{
     return(
         <div className="user-form">
             <Form className="formik-form">
-                <h1>get on the bus!</h1>
+                <h1>sign up</h1>
                 <Field className='field' placeholder='name' type='text' name='name'/>
                 {touched.name && errors.name && ( <p className='errors'>{errors.name}</p>)}
 
