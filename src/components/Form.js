@@ -31,7 +31,7 @@ const UserForm = ({values, errors, touched, status}) =>{
                 </Field>
                 {touched.role && errors.role && (<p className='errors'>{errors.role}</p>)}
 
-                <label>
+                <label className='terms-label'>
                 <Field type='checkbox' name='terms' checked={values.terms}/>I Agree to Terms of Service</label>
                 {touched.terms && errors.terms && (<p className='errors'>{errors.terms}</p>)}
 

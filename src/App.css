@@ -5,7 +5,7 @@
 
 .user-form{
   background: whitesmoke;
-  width:50%;
+  width:80%;
   margin: 0 auto;
   padding: 5%;
   box-shadow: 2px 10px 5px darkgrey;
@@ -17,10 +17,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 90%;
+  width: 70%;
   box-shadow: 2px 10px 10px grey;
   border-radius: 5px;
   padding: 5%;
+  margin: 0 auto;
 }
 
 .field{
@@ -30,27 +31,32 @@
   border-radius: 5px;
 }
 
+.terms-label{
+  margin: 2% auto;
+}
+
 .button{
   height: 40px;
   margin: 2%;
   color: whitesmoke;
-  background-color: darkmagenta;
+  background-color: palevioletred;
   border-radius: 5px;
   border: none;
   font-size: 1.2rem;
   font-weight: 700;
+  padding: 0 2%;
   box-shadow: 1px 1px 3px;
 }
 
 .user-card{
   background-image: url("https://apod.nasa.gov/apod/image/1911/M16_HaSynLumLumRGB.jpg");
   /* background-color: tomato; */
-  border-radius: 20px;
+  border-radius: 5px;
   color: whitesmoke;
   box-shadow: 2px 10px 10px grey;
   padding: 5%;
-  margin: 5% 0;
-  width: 90%;
+  margin: 5% auto;
+  width: 80%;
   display: flex;
   flex-direction: column;
   font-size: 1.6rem;
