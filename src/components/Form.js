@@ -24,7 +24,7 @@ const UserForm = ({values, errors, touched, status}) =>{
                 {touched.password && errors.password && (<p className='errors'>{errors.password}</p>)}
 
                 <label>
-                <Field type='checkbox' name='terms' checked={values.terms}/>I Agree to terms of Service</label>
+                <Field type='checkbox' name='terms' checked={values.terms}/>I Agree to Terms of Service</label>
                 {touched.terms && errors.terms && (<p className='errors'>{errors.terms}</p>)}
 
                 <button className='button' type='submit'>submit</button>
