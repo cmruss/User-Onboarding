@@ -23,6 +23,14 @@ const UserForm = ({values, errors, touched, status}) =>{
                 <Field className='field' placeholder='password' type='text' name='password'/>
                 {touched.password && errors.password && (<p className='errors'>{errors.password}</p>)}
 
+                <Field as='select' className='field' type='select' name='role'>
+                <option value="" selected disabled>select</option>
+                <option value="hero">hero</option>
+                <option value="villian">villian</option>
+                <option value="chaotic neutral">chaotic neutral</option>
+                </Field>
+                {touched.role && errors.role && (<p className='errors'>{errors.role}</p>)}
+
                 <label>
                 <Field type='checkbox' name='terms' checked={values.terms}/>I Agree to Terms of Service</label>
                 {touched.terms && errors.terms && (<p className='errors'>{errors.terms}</p>)}
@@ -35,6 +43,7 @@ const UserForm = ({values, errors, touched, status}) =>{
                     <li>name: {user.name}</li>
                     <li>email: {user.email}</li>
                     <li>password: {user.password}</li>
+                    <li>role: {user.role}</li>
                 </ul>
                 </div>
                 ))}  
@@ -42,19 +51,21 @@ const UserForm = ({values, errors, touched, status}) =>{
     );
 };
 const FormikUserForm = withFormik({
-    mapPropsToValues({name, email, password, terms}) {
+    mapPropsToValues({name, email, password, role, terms}) {
         return {
         name: name || '',
         email: email || '',
         password: password || '',
+        role: role || '',
         terms: terms || false
         };
     },
     validationSchema: Yup.object().shape({
         name: Yup.string().required(),
-        email: Yup.string().required(),
+        email: Yup.string().email().required(),
         password: Yup.string().required(),
-        terms: Yup.boolean().oneOf([true], 'Must agree to terms of service')
+        role: Yup.string().required('role select is required'),
+        terms: Yup.boolean().oneOf([true], 'must agree to terms of service')
     }),
     handleSubmit(values, {setStatus, resetForm}){
         axios
