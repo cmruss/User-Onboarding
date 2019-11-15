@@ -28,14 +28,16 @@ const UserForm = ({values, errors, touched, status}) =>{
                 {touched.terms && errors.terms && (<p className='errors'>{errors.terms}</p>)}
 
                 <button className='button' type='submit'>submit</button>
-                {users.map(user => (
+            </Form>
+            {users.map(user => (
+                    <div className='user-card'>
                 <ul key={user.id}>
                     <li>name: {user.name}</li>
                     <li>email: {user.email}</li>
                     <li>password: {user.password}</li>
                 </ul>
-            ))}
-            </Form>
+                </div>
+                ))}  
         </div>
     );
 };
